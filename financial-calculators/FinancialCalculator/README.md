@@ -50,6 +50,7 @@ To build a clean, user-friendly, and accurate mortgage calculator that:
 
 
 #### Code Strategy
+
 ##### Code Formula 
 - loanTerm = years the loan last
 - principal = total amount of loan
@@ -61,6 +62,7 @@ To build a clean, user-friendly, and accurate mortgage calculator that:
 
 
 #### Code Implementation
+- see code MortgageCalculator.java
 
 ## Learning Journey
 ### What I Struggled With
@@ -78,6 +80,67 @@ To build a clean, user-friendly, and accurate mortgage calculator that:
 - Used `System.out.printf()` for proper currency formatting.
 
 #### Mortgage Calculator Screen - screenshot
+
+## Future Value Calculator
+
+This program helps you determine the **future value** of a one-time deposit (like a CD) 
+that earns daily-compounded interest over a fixed period.
+---
+
+## 🔍 Project Goal
+
+To simulate real-world financial planning by allowing a user to:
+- Input deposit amount, interest rate, and term
+- Calculate how much their investment will grow with compound interest
+- Understand how much of that total is earned interest
+
+---
+
+## 💡 Features
+
+- User inputs:
+    - **Initial Deposit**
+    - **Annual Interest Rate (as a decimal, e.g., 0.045 for 4.5%)**
+    - **Number of Years**
+- Calculator computes:
+    - **Future Value** using daily compounding
+    - **Total Interest Earned**
+- Displays results in the command prompt
+
+## Learning Journey
+
+### What I Struggled With
+
+- **Missing prompts**: My early version didn’t prompt for interest rate or number of years, so the user didn't know what to input.
+- **Spacing in string outputs**: My `System.out.println()` was hard to read until I switched to `System.out.printf()` formatting.
+- **Naming consistency**: Some methods like `getFutureValueCalc` were renamed to be more intuitive (`calculateFutureValue`).
+- **Compound interest logic**: Ensured I understood and applied the formula for **daily compounding**.
+
+---
+
+## Calculation Strategy
+
+### Formula Used
+
+Where:
+- **FV** = Future Value
+- **P** = Principal (initial deposit)
+- **r** = Annual interest rate (decimal)
+- **t** = Number of years
+- **365** = Days per year for daily compounding
+- **Total Interest** = Future Value - Principal
+
+---
+
+## 📊 Use Case Examples
+
+| Deposit | Rate    | Years | Future Value | Interest Earned |
+|---------|---------|--------|---------------|------------------|
+| $1,000  | 1.75%   | 5      | $1,092.62     | $92.62           |
+| $5,000  | 2.5%    | 10     | $6,410.53     | $1,410.53        |
+| $10,000 | 4.25%   | 7      | $13,517.25    | $3,517.25        |
+
+---
 
 #### Erroneous inputs and error messages - screenshot
 - This error kept happening because i didn't pass user results into parameter
