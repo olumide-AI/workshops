@@ -1,13 +1,30 @@
 # Financial Calculator 
-A Java-based collection of simple financial calculators built with IntelliJ.
+A Java-based collection of simple financial calculator built with IntelliJ.
+
+## Project Goal
+
+To build a clean, user-friendly, and accurate mortgage calculator that:
+- Accepts user input (principal, interest rate, and loan term)
+- Calculates monthly payments using compound interest
+- Computes total interest paid over the loan's lifetime
+- Displays results in a well-formatted, readable summary
+
 
 ## Features 
 - Mortgage Calculator 
 - Future Value Calculator 
 - Present Value Calculator 
 
-## Mortgage Calculator 
-
+#### Mortgage Calculator 
+- User enters:
+    - **Loan/Principal amount**
+    - **Annual interest rate (decimal form, e.g., 0.07625 for 7.625%)**
+    - **Loan term (years)**
+- Program calculates:
+    - **Monthly interest rate**
+    - **Monthly payment**
+    - **Total interest paid**
+  
 #### Code Behaviour 
 ##### Code input
 - **Principal/Loan Amount:** How much money the user is borrowing 
@@ -45,9 +62,26 @@ A Java-based collection of simple financial calculators built with IntelliJ.
 
 #### Code Implementation
 
+## Learning Journey
+### What I Struggled With
+
+- **Method design**: Initially had methods that re-prompted for input every time they were called, leading to confusing loops and repeated prompts.
+- **Understanding method parameters**: Learned that passing variables into methods (like `principal`, `rate`, and `term`) prevents re-prompting and keeps logic clean.
+- **Scanner reuse**: Realized that closing `Scanner` too early or using it in multiple places caused `NoSuchElementException`. Solution: pass one `Scanner` into all input methods.
+- **Java printf** formatting: Learned how to use `System.out.printf()` to format money, percentages, and make output user-friendly.
+
+### Fixes Applied
+
+- Created **one `Scanner`** in `main()` and passed it into all input methods.
+- Stored input once, then reused values in calculation methods.
+- Updated `displayResults()` to accept **all needed values as parameters**, so it can present a complete example-style summary.
+- Used `System.out.printf()` for proper currency formatting.
+
 #### Mortgage Calculator Screen - screenshot
 
 #### Erroneous inputs and error messages - screenshot
+- This error kept happening because i didn't pass user results into parameter
+and the console kept prompting user for new results going in a loop. 
 
 ## Home Screen - screenshot
 
