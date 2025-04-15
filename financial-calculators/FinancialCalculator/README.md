@@ -85,9 +85,8 @@ To build a clean, user-friendly, and accurate mortgage calculator that:
 
 This program helps you determine the **future value** of a one-time deposit (like a CD) 
 that earns daily-compounded interest over a fixed period.
----
 
-## 🔍 Project Goal
+## Project Goal
 
 To simulate real-world financial planning by allowing a user to:
 - Input deposit amount, interest rate, and term
@@ -96,7 +95,7 @@ To simulate real-world financial planning by allowing a user to:
 
 ---
 
-## 💡 Features
+## Features
 
 - User inputs:
     - **Initial Deposit**
@@ -144,8 +143,8 @@ Where:
 
 #### Erroneous inputs and error messages - screenshot
 - This error kept happening because i didn't pass user results into parameter
-and the console kept prompting user for new results going in a loop. 
-
+and the console kept prompting user for new results going in a loop.
+![parameter error](/Users/user/pluralsight/workshops/assets/loan term is buggy.png)
 ## Home Screen - screenshot
 
 ## Author
