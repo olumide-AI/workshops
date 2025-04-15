@@ -10,7 +10,7 @@ public class MortgageCalculator {
     //Get principal, interest rate and loan length from user
     //Get Principal
     public static double getPrincipalAmount() {
-        System.out.println("Please provide your Principal amount: ");
+        System.out.println("Please provide your Principal amount. Ex(120000): ");
         double principal = scanner.nextDouble();
         return principal;
     }
@@ -27,6 +27,27 @@ public class MortgageCalculator {
         return loanTerm;
     }
 
-    //Logic calculations 
+    //Logic calculations
+    // Number of monthly payments
+    public static double getNoMonthlyPay(){
+        double noMonthlyPay = 12 * getLoanTerm();
+        return noMonthlyPay;
+    }
+    // Compound interest formula calculator for the monthly payment
+    public static double getMonthlyPay(){
+        double monthlyPay =  (getMonthlyIntRate()*(Math.pow(1+getMonthlyIntRate(),getNoMonthlyPay())) / (Math.pow(1+getMonthlyIntRate(),getNoMonthlyPay()))-1);
+        return monthlyPay;
+    }
+    //Total interest calculations
+    public static double getTotalInt(){
+        double totalInt = (getMonthlyPay() * getNoMonthlyPay()) - getPrincipalAmount();
+        return totalInt;
+    }
+
+
+    //Display Output
+    public static void disUserCalculations(){
+        System.out.println();
+    }
 
 }
