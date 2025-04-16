@@ -23,7 +23,7 @@ public class MortgageCalculator {
     //Logic calculations
     //Convert Annual Rate to Monthly rate
     public static double getMonthlyIntRate(double annualRate){
-        return annualRate/12;
+        return annualRate/12/100;
     }
     //Calculate the Monthly payments using compound interest formula
     public static double calculateMonthlyPay(double principal, double monthlyIntRate, int noMonthlyPay){
