@@ -26,6 +26,7 @@ To build a clean, user-friendly, and accurate mortgage calculator that:
     - **Total interest paid**
   
 #### Code Behaviour 
+
 ##### Code input
 - **Principal/Loan Amount:** How much money the user is borrowing 
 - **Interest Rate:** Usually annual, e.g., 5% per year.
@@ -131,7 +132,7 @@ Where:
 
 ---
 
-## 📊 Use Case Examples
+## Use Case Examples
 
 | Deposit | Rate    | Years | Future Value | Interest Earned |
 |---------|---------|--------|---------------|------------------|
@@ -140,6 +141,90 @@ Where:
 | $10,000 | 4.25%   | 7      | $13,517.25    | $3,517.25        |
 
 ---
+
+## Present Value calculator
+
+A simple Java program built by Olumide Kolawole to calculate how much you need to invest **today** to receive regular payouts over time — based on the financial concept of a **present value annuity**.
+
+---
+
+## Project Goal
+
+To simulate financial planning for retirement, pensions, or structured settlements by:
+- Taking user input for future payouts and interest expectations
+- Calculating the required investment today to meet those payouts
+- Applying the standard Present Value of Annuity formula
+
+---
+
+## Features
+
+- User inputs:
+    - **Monthly payout amount**
+    - **Expected annual interest rate** (as a decimal, e.g., 0.07625 for 7.625%)
+    - **Number of years** the annuity will pay out
+- Program computes:
+    - **Present value of the annuity (PVA)** using standard formula
+- Displays a clear, readable output
+
+## Inputs &  Outputs
+
+| Input Field           | Example Value |
+|-----------------------|---------------|
+| Monthly Payout        | 1000          |
+| Annual Interest Rate  | 0.07625       |
+| Number of Years       | 15            |
+
+| Output Field          | Result Example |
+|-----------------------|----------------|
+| Present Value Annuity | $108,914.33    |
+
+---
+
+## Learning Journey
+
+### What I Struggled With
+
+- **Understanding the problem**: I initially wasn’t clear on whether we were paying or receiving money, or how interest compounding played into it.
+- **Getting the final answer right**: My results were consistently **off by about $20,000** compared to verified examples — might need further refactor.
+- **Number of periods**: I had to fully grasp that it means the **number of payments** (monthly), not years.
+- **Confidence in my logic**: I built it cleanly but I'm taking a pause to step back and re-check the formula with real-world scenarios.
+
+---
+
+## Calculation Strategy
+
+### Formula Used
+PVA = P × (1 - (1 + r)^-n) / r
+
+Where:
+- **PVA** = Present Value of the Annuity
+- **P** = Payment per period
+- **r** = Interest rate per period (monthly)
+- **n** = Number of periods (years × 12)
+
+### Example:
+- Payment: $1,000/month
+- Years: 15
+- Interest rate: 7.625% annual → 0.07625 ÷ 12 = 0.006354 monthly
+- Periods: 15 × 12 = 180
+
+---
+
+## Use Case Examples
+
+| Monthly Payment | Interest Rate | Years | Present Value Needed |
+|-----------------|----------------|--------|------------------------|
+| $1,000          | 7.625%         | 15     | ~$108,914.33           |
+| $2,500          | 6.5%           | 20     | ~$342,116.92           |
+| $1,200          | 5.0%           | 10     | ~$113,572.36           |
+
+
+---
+##  Notes for Future Improvement
+
+- Recheck and refactor logic to align more precisely with verified results
+- Separate calculation for converting annual rate to monthly rate
 
 #### Erroneous inputs and error messages - screenshot
 - This error kept happening because i didn't pass user results into parameter
